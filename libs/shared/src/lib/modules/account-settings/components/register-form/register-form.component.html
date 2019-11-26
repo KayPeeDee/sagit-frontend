@@ -1,0 +1,50 @@
+<mat-card class="demo-card demo-basic">
+  <mat-toolbar color="primary">Create Account</mat-toolbar>
+  <mat-card-content>
+    <div [formGroup]="registerForm">
+        <div>
+            <mat-form-field class="demo-full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Email Address</mat-label>
+                <input matInput formControlName="emailAddress">
+            </mat-form-field>
+        </div>
+
+         <div>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <button mat-raised-button color="primary" (click)="register()">Create Account</button>
+        </div>
+
+        
+    </div>
+  </mat-card-content>
+  
+</mat-card>
+
+
+

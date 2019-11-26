@@ -1,36 +1,42 @@
-.demo-card-container {
-  display: flex;
-  flex-flow: column nowrap;
+.demo-toolbar {
+  padding: 6px;
 
-  .mat-card {
-    margin: 0 16px 16px 0;
-    width: 350px;
+  .demo-toolbar-icon {
+    padding: 0 14px;
   }
 
-  img {
-    background-color: gray;
+  .demo-fill-remaining {
+    flex: 1 1 auto;
   }
-}
 
-.demo-card-blue {
-  background-color: #b0becc;
-
-  .mat-card-actions {
-    display: flex;
-    flex-direction: column;
+  button {
+    margin: 0 4px;
   }
 }
 
-.demo-menu {
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 12px;
+  border: 1px solid #555;
+}
+
+mat-drawer-content {
+  padding: 12px;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .demo-menu-section {
-    width: 300px;
-    margin: 20px;
-  }
+mat-sidenav-container {
+  height: 100%;
+}
 
-  .demo-end-icon {
-    justify-content: flex-end;
-  }
+mat-sidenav, mat-sidenav-content{
+  padding: 16px;
+}
+
+mat-sidenav{
+  background-color: lightgrey;
+  width: 200px;
 }

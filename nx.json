@@ -31,6 +31,9 @@
     },
     "supervision-portal": {
       "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }

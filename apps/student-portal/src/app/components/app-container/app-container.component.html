@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>My Application</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">Sidenav content</mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-raised-button (click)="opened = !opened">Toggle this shit</button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
+
+

@@ -1,0 +1,27 @@
+<mat-card class="demo-card demo-basic">
+  <mat-toolbar color="primary">Login</mat-toolbar>
+  <mat-card-content>
+    <div [formGroup]="loginForm">
+        <p>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="demo-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+        </p>
+
+        <p>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </p>
+        
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+
