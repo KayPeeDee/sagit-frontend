@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AdminInstitutionsService } from '../../services/admin-institutions.service';
-import { MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
 import { AdminCreateInstitutionComponent } from '../admin-create-institution/admin-create-institution.component';
 
 
@@ -47,7 +47,7 @@ export class AdminListInstitutionsComponent implements OnInit {
     this.institutionService.getInstitutions().subscribe(
       res => {
         console.log(res);
-        // this.institutions = res;
+        this.institutions = res;
         this.dataSource = new MatTableDataSource<Institution>(res);
         this.dataSource.paginator = this.paginator;
       }
@@ -55,10 +55,16 @@ export class AdminListInstitutionsComponent implements OnInit {
   }
 
   openCreateInstitutionDialog() {
-    const dialogRef = this.dialog.open(AdminCreateInstitutionComponent);
+
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '45%'
+    const dialogRef = this.dialog.open(AdminCreateInstitutionComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      console.log(result);
+      this.getInstitutions();
     });
   }
  
